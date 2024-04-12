@@ -1,0 +1,293 @@
+/* Developer: Nirajan Mahara
+   Date: April 10, 2024
+   C-Number: C0921977 */
+
+/* Import W3.CSS */
+@import url('https://www.w3schools.com/w3css/4/w3.css');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom Styles */
+.container {
+  /*   max-width: 1000px; */
+  /*   margin: 25px auto; */
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 10%;
+}
+
+.banner {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.banner h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.banner .copyright {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #666;
+}
+
+.input-panel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.input-panel input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+#getLocationBtn {
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  /* Subtle color */
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #00ff08;
+}
+
+#getLocationBtn:hover {
+  background-color: #e0e0e0;
+  /* Lighter color on hover */
+}
+
+/* CSS styles for the search history */
+#searchHistory {
+  margin-top: 5px;
+}
+
+#historyList li {
+  cursor: pointer;
+  list-style-type: none;
+  padding: 0;
+}
+
+#historyList li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  /* Subtle color */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#historyList li:hover {
+  background-color: #e0e0e0;
+  /* Lighter color on hover */
+}
+
+.remove-btn {
+  margin-left: 5px;
+  padding: 2px 3px;
+  background-color: #f0f0f0;
+  /* Subtle color */
+  border-radius: 5px;
+  cursor: pointer;
+}
+.remove-btn:hover {
+  background-color: #e0e0e0;
+  /* Lighter color on hover */
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .input-panel {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-panel input[type="text"] {
+    margin: 5px;
+  }
+
+}
+
+.weather-panel {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+
+/* Weather Container */
+.weather-container {
+  margin-top: 5px;
+}
+
+.cities {
+  list-style-type: none;
+  padding: 0;
+}
+
+.city {
+  cursor: pointer;
+  display: inline-block;
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  border: 10px solid #000;
+  border-radius: 25%;
+  background-color: #00ff08;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.city:hover {
+  background-color: #00d603;
+  /* Darker shade of green on hover */
+}
+
+.city:active {
+  transform: scale(0.85);
+  /* Scale down slightly on click */
+}
+
+.city-name {
+  font-size: 20px;
+}
+
+.city-temp {
+  font-size: 24px;
+  margin-top: 10px;
+}
+
+.city-icon {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
+}
+
+/* Loading Container */
+#loading-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Transparent white background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* Shadow effect */
+  display: none;
+  /* Hide by default */
+}
+
+#loading-gif {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+#loading-text {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.picture-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+.picture-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.picture-gallery img:hover {
+  transform: scale(1.1);
+}
+
+.error-message {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: rgba(255, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* Toggle Light/Dark Mode */
+.toggle-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.toggle {
+  display: none;
+}
+
+.toggle-label {
+  font-size: 14px;
+  color: #666;
+  background-color: #f0f0f0;
+  /* Subtle color */
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.toggle-label:hover {
+  background-color: #e0e0e0;
+  /* Lighter color on hover */
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-mode .container {
+  background-color: #333;
+}
+
+.dark-mode .banner h1 {
+  color: #fff;
+}
+
+.dark-mode .banner .copyright {
+  color: #ccc;
+}
+
+.dark-mode .input-panel input[type="text"] {
+  background-color: #555;
+  color: #fff;
+}
+
+.dark-mode .weather-panel {
+  color: #fff;
+}
+
+.dark-mode .error-message {
+  background-color: rgba(255, 0, 0, 0.8);
+}

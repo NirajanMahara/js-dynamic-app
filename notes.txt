@@ -1,0 +1,47 @@
+Development Notes
+--------------------------
+Developer: Nirajan Mahara  
+Date: April 10, 2024  
+C-Number: C0921977  
+
+Functionality:
+- Integrates Unsplash and OpenWeatherMap APIs.
+- Displays real-time weather and pictures.
+- Responsive design with Bootstrap/W3.CSS.
+- Utilizes jQuery for DOM manipulation.
+- Includes comments for clarity and maintainability.
+
+Features:
+- Real-time weather updates.
+- Dynamic picture gallery.
+- User-friendly interface.
+- Efficient API integration.
+- Responsive layout.
+
+Enhancements:
+- Typography with Google Fonts.
+- Single timer for updates.
+- Error handling for robustness.
+- Clear documentation for reference.
+- Optimized for performance and user experience.
+
+Web Page Structure:
+
+1. Panel 1: Banner
+   - Displays developer information and copyright messages.
+   - Includes name, date of creation, and C-number.
+
+2. Panel 2: Input Boxes
+   - Provides input fields for picture search and city selection.
+   - Enables fetching pictures from Unsplash based on user queries.
+   - Allows users to input a city for retrieving current weather data.
+
+3. Panel 3: Date, Time, and Weather Display
+   - Shows current date and time, updating every second.
+   - Fetches and displays weather information for the selected city, updating every minute.
+
+4. Panel 4: Picture Gallery
+   - Displays pictures fetched from Unsplash.
+   - Automatically refreshes the displayed pictures every 20 seconds.
+
+Overall, This project showcases the creative integration of multiple API, Unsplash and OpenWeatherMap APIs, GeoLocation API, Date and Time API, demonstrating technical skills and innovation in web development. Also, important feature implementation of the search history and see weather of multiple location in a row. The implementation prioritizes user experience, responsiveness, and aesthetic appeal and kind of "Mashup" project.
